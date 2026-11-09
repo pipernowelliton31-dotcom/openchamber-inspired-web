@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Workspace — Morrow</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="workbench-page">
+  <div class="workspace" id="workspace-root">
+    <div class="mobile-backdrop" id="mobile-backdrop" hidden></div>
+    <aside class="wb-sidebar" id="wb-sidebar" aria-label="Sessions">
+      <div class="wb-brand-row"><a class="wordmark" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span></span><span class="brand-name">Morrow</span></a><button type="button" class="icon-button sidebar-close" id="sidebar-close" aria-label="Close navigation">&times;</button></div>
+      <button class="button button-neutral new-session" id="new-session" type="button"><span aria-hidden="true">+</span> New session <span class="shortcut-key">N</span></button>
+      <label class="search-field"><span class="sr-only">Search sessions</span><span aria-hidden="true">&#8981;</span><input id="session-search" type="search" placeholder="Search sessions"><span class="shortcut-key">/</span></label>
+      <div class="session-scroll">
+        <div class="rail-section-heading">In progress</div>
+        <button class="session-row selected" type="button" data-session="Research synthesis" data-project="Design system" data-state="Working"><span class="session-icon state-running"></span><span class="session-title">Research synthesis</span><span class="session-when">now</span></button>
+        <button class="session-row" type="button" data-session="Component library" data-project="Design system" data-state="Ready"><span class="session-icon state-neutral"></span><span class="session-title">Component library</span></button>
+        <button class="session-row" type="button" data-session="Review meeting notes" data-project="Knowledge base" data-state="Completed"><span class="session-icon state-complete"></span><span class="session-title">Review meeting notes</span></button>
+        <div class="rail-section-heading">Projects</div>
+        <button class="project-row" type="button" data-session="Design system" data-project="Design system" data-state="Ready"><span class="project-glyph">&#9707;</span><span>Design system</span><span class="project-count">4</span></button>
+        <button class="project-row" type="button" data-session="Knowledge base" data-project="Knowledge base" data-state="Ready"><span class="project-glyph">&#9707;</span><span>Knowledge base</span><span class="project-count">8</span></button>
+        <button class="project-row" type="button" data-session="Product planning" data-project="Product planning" data-state="Ready"><span class="project-glyph">&#9707;</span><span>Product planning</span><span class="project-count">2</span></button>
+        <div id="session-empty" class="search-empty" hidden>No matching sessions.</div>
+      </div>
+      <div class="sidebar-footer"><a href="index.html" class="text-action">&#8592; Back to website</a><button type="button" class="icon-button" data-theme-toggle aria-label="Switch color theme" title="Switch color theme"><span class="theme-symbol" aria-hidden="true">&#9790;</span></button></div>
+    </aside>
+
+    <div class="wb-center">
+      <header class="wb-header"><div class="wb-header-left"><button class="icon-button hamburger" id="sidebar-open" type="button" aria-label="Open navigation" aria-controls="wb-sidebar" aria-expanded="false">&#9776;</button><span class="wb-breadcrumb">Design system</span><span class="breadcrumb-slash">/</span><span id="session-title" class="wb-title">Research synthesis</span></div><div class="wb-header-actions"><span class="wb-live-state"><span id="run-state-dot" class="status-dot status-dot-blue"></span><span id="run-state-text">Working</span></span><button class="button button-minimal" type="button" id="inspector-toggle" aria-controls="wb-inspector" aria-expanded="true">Context <span aria-hidden="true">&#9776;</span></button></div></header>
+      <main class="wb-transcript" id="wb-transcript" aria-label="Agent conversation">
+        <div class="chat-column">
+          <div class="demo-label">INTERACTIVE DESIGN DEMO <span class="separator-dot">&middot;</span> NOT CONNECTED TO AN AI SERVICE</div>
+          <div id="session-content"><div class="message-user">Bring our research into a focused design direction. Prioritize the details that make the interface feel calm and easy to use.</div>
+          <div class="message-agent"><div class="message-author"><span class="assistant-avatar">M</span><span>Morrow assistant</span><span class="message-time">2m ago</span></div><div class="activity-summary"><span class="status-dot status-dot-green"></span> Reviewed 4 notes <span class="preview-separator">&middot;</span> Organized 3 principles</div><h2>Clarity is a design decision.</h2><p>The best workspace is quiet when you're reading and responsive when you're acting. Create hierarchy with tone and space before adding borders or color.</p><p>Start with one stable task surface, then make tools and sources available as contextual layers. Keep important states visible; let optional detail remain out of the way.</p>
+          <div class="principle-list"><div class="principle-item"><span>01</span><div><strong>One primary work area</strong><small>Preserve reading and input position.</small></div></div><div class="principle-item"><span>02</span><div><strong>Purposeful depth</strong><small>Lift controls, not every card.</small></div></div><div class="principle-item"><span>03</span><div><strong>Quiet states</strong><small>Color should explain what is happening.</small></div></div></div>
+          <details class="activity-details"><summary>View sample activity <span aria-hidden="true">&#8250;</span></summary><div>Read research-notes.md<br>Grouped common concerns<br>Prepared a design summary</div></details></div></div>
+          <div id="new-messages" aria-live="polite"></div>
+        </div>
+      </main>
+      <div class="composer-region"><form id="prompt-form" class="composer" aria-label="Demo prompt composer"><label for="prompt-input" class="sr-only">Prompt</label><textarea id="prompt-input" rows="2" placeholder="Ask a question or describe a task..."></textarea><div class="composer-footer"><div class="composer-modes" role="group" aria-label="Mode"><button type="button" class="mode-pill active" data-mode="Discuss" aria-pressed="true">Discuss</button><button type="button" class="mode-pill" data-mode="Build" aria-pressed="false">Build</button></div><div class="composer-actions"><span class="model-caption">Example model <span aria-hidden="true">&#8964;</span></span><button class="send-button" type="submit" aria-label="Send demo prompt">&#8593;</button></div></div></form><div class="composer-disclaimer" id="composer-feedback">Demo interface only. No model or tool will be called.</div></div>
+    </div>
+
+    <aside class="wb-inspector" id="wb-inspector" aria-label="Context inspector"><header class="inspector-header"><span>Session context</span><button type="button" class="icon-button inspector-close" id="inspector-close" aria-label="Close context panel">&times;</button></header><div class="inspector-tabs" role="tablist" aria-label="Context tabs"><button type="button" role="tab" class="tab active" id="tab-overview" data-panel="overview" aria-controls="panel-overview" tabindex="0" aria-selected="true">Overview</button><button type="button" role="tab" class="tab" id="tab-files" data-panel="files" aria-controls="panel-files" tabindex="-1" aria-selected="false">Files</button></div>
+      <div class="inspector-scroll"><section id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" data-panel-content="overview"><div class="inspector-stat"><span class="label-small">Project</span><strong id="inspector-project">Design system</strong></div><div class="inspector-stat"><span class="label-small">Context</span><div class="context-meter"><div></div></div><div class="context-caption"><span>Example allocation</span><span>18%</span></div></div><div class="inspector-stat"><span class="label-small">Working sources</span><div class="file-row"><span aria-hidden="true">&#9634;</span> research-notes.md</div><div class="file-row"><span aria-hidden="true">&#9634;</span> interface-inventory.md</div><div class="file-row"><span aria-hidden="true">&#9634;</span> design-decisions.md</div></div><div class="inspector-stat"><span class="label-small">Run summary</span><div class="metric-row"><span>Time</span><strong>Sample</strong></div><div class="metric-row"><span>Tools</span><strong>Illustrative</strong></div><div class="metric-row"><span>Usage</span><strong>Not connected</strong></div></div></section>
+      <section id="panel-files" role="tabpanel" aria-labelledby="tab-files" data-panel-content="files" hidden><div class="inspector-stat"><span class="label-small">Sample project files</span><div class="file-row"><span aria-hidden="true">&#9634;</span> README.md</div><div class="file-row"><span aria-hidden="true">&#9634;</span> research-notes.md</div><div class="file-row"><span aria-hidden="true">&#9634;</span> tokens.css</div><div class="file-row"><span aria-hidden="true">&#9634;</span> components.tsx</div></div><p class="small-explanation">Files in this demo are illustrative. Connect a real filesystem or service to make this view live.</p></section></div>
+      <div class="inspector-bottom"><span class="status-dot status-dot-green"></span> Layout ready <span class="inspector-demo">Sample data</span></div>
+    </aside>
+  </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Morrow is a calm, original AI workspace demo.">
+  <title>Morrow — A calmer AI workspace</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="marketing-page">
+  <header class="site-topbar layout-container">
+    <nav class="nav-capsule" aria-label="Main navigation">
+      <a class="wordmark" href="index.html" aria-label="Morrow home"><span class="brand-mark" aria-hidden="true"><span></span></span><span class="brand-name">Morrow</span></a>
+      <a class="nav-link" href="#product">Product</a>
+      <a class="nav-link" href="#workflow">Workflow</a>
+      <a class="nav-link" href="#principles">Approach</a>
+      <a class="nav-link nav-small-hide" href="workbench.html">Workspace</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Switch color theme" title="Switch color theme"><span class="theme-symbol" aria-hidden="true">&#9790;</span></button>
+      <a class="button button-warm button-large" href="workbench.html">Open demo <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-band layout-container" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true"><div class="hero-mountain hero-mountain-left"></div><div class="hero-mountain hero-mountain-right"></div><div class="hero-mist"></div><div class="hero-orb"></div></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-stroke"></span> FOR WORK THAT NEEDS FOCUS</div>
+        <h1 id="hero-title">A quieter place<br>for your best work.</h1>
+        <p>Plan, explore, and work with AI agents in one considered space. Your ideas stay in focus while the busy parts fade away.</p>
+        <div class="hero-actions"><a class="button button-warm button-prominent" href="workbench.html">Explore the workspace <span aria-hidden="true">&rarr;</span></a><a class="button button-plain" href="#product">See how it works</a></div>
+      </div>
+      <div class="hero-window" aria-label="Illustrative agent workspace preview">
+        <div class="preview-titlebar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>morrow / studio</span><span class="preview-titlebar-right">Demo workspace <span class="status-dot status-dot-green"></span></span></div>
+        <div class="preview-grid">
+          <aside class="preview-side">
+            <div class="preview-side-label">In progress</div>
+            <div class="preview-task active"><span class="tiny-status status-dot-green"></span> Release notes <span class="tiny-time">2m</span></div>
+            <div class="preview-task"><span class="tiny-status"></span> Concept map</div>
+            <div class="preview-task"><span class="tiny-status"></span> Component audit</div>
+            <div class="preview-side-label second">Projects</div>
+            <div class="preview-task">&#9707; Design system</div>
+            <div class="preview-task">&#9707; Research notes</div>
+            <div class="preview-task">&#9707; Product launch</div>
+          </aside>
+          <section class="preview-center">
+            <div class="preview-question">Draft a thoughtful launch update from our latest changes.</div>
+            <div class="preview-activity"><span class="status-dot status-dot-green"></span> Read 6 files <span class="preview-separator">&middot;</span> Summarized 3 changes</div>
+            <h3>A more focused release.</h3>
+            <p>The new workspace keeps the conversation and relevant documents together. You can revisit decisions, review changes, and continue without losing your place.</p>
+            <div class="preview-chart"><span>Clarity, week by week</span><svg viewBox="0 0 460 82" role="img" aria-label="Illustrative line chart showing a gradual rise"><defs><linearGradient id="chartfill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#caa182" stop-opacity=".20"/><stop offset="1" stop-color="#caa182" stop-opacity="0"/></linearGradient></defs><path d="M8 69 L74 60 L142 57 L207 46 L275 39 L344 29 L451 9 L451 78 L8 78 Z" fill="url(#chartfill)"/><path d="M8 69 L74 60 L142 57 L207 46 L275 39 L344 29 L451 9" stroke="#b57e61" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="451" cy="9" r="4" fill="#b57e61"/></svg></div>
+            <div class="preview-input">Ask a follow-up or start something new <span aria-hidden="true">&#8593;</span></div>
+          </section>
+          <aside class="preview-context"><div class="preview-context-title">Session context</div><div class="preview-context-label">Current project</div><div class="preview-context-value">Product launch</div><div class="preview-context-label">Sources</div><div class="preview-context-line">&#9707; release-notes.md</div><div class="preview-context-line">&#9707; roadmap.md</div><div class="preview-context-line">&#9707; changelog</div><div class="preview-context-label">Model</div><div class="preview-context-value">Connected agent</div><div class="preview-context-footer">Sample interface</div></aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="product" class="feature-section layout-container" aria-labelledby="product-title">
+      <div class="section-copy"><span class="section-index">01 / THE WORKSPACE</span><h2 id="product-title">Everything in its place.</h2><p>Let the main task own the center. Bring files, context and history closer when you need them, then move them out of the way.</p></div>
+      <div class="feature-grid">
+        <div class="feature-card"><div class="feature-symbol">&#9634;</div><h3>One clear task</h3><p>Stay with the idea you are exploring. The interface gives your work room to breathe.</p></div>
+        <div class="feature-card"><div class="feature-symbol">&#9707;</div><h3>Context on demand</h3><p>Sources, tools and reference material live beside the work instead of inside every message.</p></div>
+        <div class="feature-card"><div class="feature-symbol">&#8599;</div><h3>Small, deliberate actions</h3><p>Controls are visible when helpful. Secondary details wait until you need them.</p></div>
+      </div>
+    </section>
+
+    <section id="workflow" class="feature-section editorial-section layout-container" aria-labelledby="workflow-title"><div class="editorial-copy"><span class="section-index">02 / BETTER FLOW</span><h2 id="workflow-title">Complexity stays behind the scenes.</h2><p>Start from a goal. Keep the current work visible, and let supporting detail live one click away. Designed for long sessions and thoughtful decisions.</p><a class="inline-link" href="workbench.html">See the interactive example <span aria-hidden="true">&rarr;</span></a></div><div class="workflow-visual"><div class="workflow-top"><span class="status-dot status-dot-green"></span> Review finished <span class="workflow-muted">Just now</span></div><div class="workflow-item"><span>01</span><div><strong>Explore the problem</strong><small>Sources and requirements stay attached</small></div><span class="workflow-check">&#10003;</span></div><div class="workflow-item"><span>02</span><div><strong>Understand the options</strong><small>Compare before making a change</small></div><span class="workflow-check">&#10003;</span></div><div class="workflow-item"><span>03</span><div><strong>Carry it forward</strong><small>Keep outcomes close to the original task</small></div><span class="workflow-check">&#10003;</span></div></div></section>
+
+    <section id="principles" class="feature-section closing-section layout-container" aria-labelledby="closing-title"><span class="section-index">03 / THE PRINCIPLE</span><h2 id="closing-title">Less interface.<br>More intention.</h2><p>The most useful product is the one that gets out of your way at exactly the right time.</p><a href="workbench.html" class="button button-warm button-prominent">Step into the demo <span aria-hidden="true">&rarr;</span></a></section>
+  </main>
+  <footer class="site-footer layout-container"><div><span class="brand-name">Morrow</span><span class="footer-note">An original interface exploration.</span></div><div><a href="#product">Product</a><a href="#workflow">Workflow</a><a href="workbench.html">Workspace</a></div></footer>
+</body>
+</html>

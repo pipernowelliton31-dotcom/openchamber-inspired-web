@@ -1,0 +1,15 @@
+interface:
+  display_name: Calm Agent Web Design
+  short_description: Build warm, quiet AI workbenches and editorial product sites
+  default_prompt: Build an original, polished AI agent website using this skill's
+    OpenChamber-inspired design system, with functional interactions and responsive
+    QA.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

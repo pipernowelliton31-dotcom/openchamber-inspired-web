@@ -1,15 +1,17 @@
-# OpenChamber-inspired Web
+# OpenChamber Inspired Web
 
-A reusable UI design skill and original Agent workbench starter, inspired by OpenChamber's calm, warm design principles.
+A reusable Skill for building warm, quiet AI agent workbenches, coding dashboards and editorial product websites. Includes an original Morrow starter/demo.
 
-## Contents
+## Quick start
 
-- [`skill/`](skill/) — installable ChatGPT Skill with references, scripts, and starter assets.
-- [`demo/`](demo/) — original Morrow landing page and interactive Agent workbench demo.
-- [`skill/SKILL.md`](skill/SKILL.md) — entrypoint and usage instructions.
+- [Skill instructions](openchamber-inspired-web/SKILL.md)
+- [Skill documentation](openchamber-inspired-web/README.md)
+- [Morrow landing page](morrow-demo/index.html) and [agent workbench](morrow-demo/workbench.html)
 
-See [`skill/README.md`](skill/README.md) for Skill details. The demonstration is not connected to a live AI backend.
+Run the demo by serving the `morrow-demo/` directory, e.g. `python -m http.server 8000` from that folder, then open http://localhost:8000.
 
-## Provenance
+To install the Skill, package the `openchamber-inspired-web/` directory as a ZIP retaining the top-level folder and its `SKILL.md`.
 
-UI principles were studied from [OpenChamber](https://github.com/openchamber/openchamber) v2.7.0. This is an independent educational adaptation, not an official OpenChamber project. Original OpenChamber code is MIT licensed (copyright 2025 Bohdan Triapitsyn); this repository contains newly written templates, not copied upstream source or brand artwork. Fixel font files are not redistributed.
+## Credits & provenance
+
+Independent educational adaptation drawing on [OpenChamber](https://github.com/openchamber/openchamber) v2.7.0 UI principles. OpenChamber's original software is MIT licensed, copyright (c) 2025 Bohdan Triapitsyn. This repository does not contain OpenChamber branding, artwork or bundled proprietary font files. Fixel font references retain their respective license and upstream source. The Morrow demo is front-end only and is not connected to any model API.
